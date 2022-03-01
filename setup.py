@@ -9,7 +9,7 @@ setup(
     description="An efficient and simple anti-spam system made for your discord bots.",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    packages=['Paginator'],
+    packages=['SpamFilter'],
     url="https://github.com/DorianAarno/SpamFilter",
     author="Aarno Dorian",
     author_email="aarnodorian56@gmail.com",
