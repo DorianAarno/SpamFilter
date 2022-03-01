@@ -14,7 +14,7 @@ from antispam import AntiSpam
 
 @bot.event
 async def on_message(msg):
-  spam_check = AntiSpam.check(bot, ctx.channel, ctx.author)
+  spam_check = AntiSpam.check(bot, msg.channel, msg.author)
 ```
 
 ### Detailed Guide
@@ -33,13 +33,19 @@ async def on_message(msg):
     timer = timer_check,
     content = content_check,
     history = history_check
-  ).check(bot, ctx.channel, ctx.author)
+  ).check(bot, msg.channel, msg.author)
 ```
 
+# Notes 
+* This library has only been tested with [discord-disnake](https://pypi.org/project/discord-disnake/). 
+* Your bot needs to have access to message content. 
 
 # Contributing
-* Pull requests and issues are welcome.
-* Consider giving this repository a ⭐, It is highly appreciated!
+* Fork the repository. 
+* Add your desired change or filter. 
+* Open pull request. 
+* Issues are welcome. 
+* Consider giving this repository a ⭐, It is highly appreciated! 
 
 # License
 This repository has been made available via [MIT](https://github.com/DorianAarno/SpamFilter/blob/main/LICENSE) License.
