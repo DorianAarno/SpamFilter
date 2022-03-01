@@ -13,7 +13,7 @@ setup(
     url="https://github.com/DorianAarno/SpamFilter",
     author="Aarno Dorian",
     author_email="aarnodorian56@gmail.com",
-    download_url = "",
+    download_url = "https://github.com/DorianAarno/SpamFilter/archive/refs/tags/v1.0.tar.gz",
     license = "MIT",
     classifiers=[
         'Intended Audience :: Developers',

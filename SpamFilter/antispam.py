@@ -31,6 +31,14 @@ class AntiSpam:
                 Author_Messages.append(msg)
 
         if self._history_check:
+            for i, msg in enumerate(Messages):
+                if msg.author.id == author.id:
+                    try:
+                        if msg.content == Messages[i+1].content:
+                            return True
+                    except:
+                        pass
+                    
             if Author_Messages[0].content == Author_Messages[1].content:
                 return True
 
