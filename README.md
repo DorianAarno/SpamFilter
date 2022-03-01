@@ -10,7 +10,7 @@ pip install discordpy-antispam
 # Usage
 ### Quickstart Guide
 ```py
-from antispam import AntiSpam
+from SpamFilter import AntiSpam
 
 @bot.event
 async def on_message(msg):
@@ -19,7 +19,7 @@ async def on_message(msg):
 
 ### Detailed Guide
 ```py
-from antispam import AntiSpam
+from SpamFilter import AntiSpam
 
 dictionary_check = True # Default is False, DO NOT USE THIS IF YOUR SERVER IS MULTI-LINGUAL, Checks if any word in the message is present in english dictionary.
 timer_check = True # Default is True, Checks if a member has sent more than 5 messages within 15 seconds, if yes, 6th message is marked as spam.
