@@ -1,27 +1,14 @@
 import discord
-from nltk.corpus import words
+from nltk.corpus import words as dictionary
 from datetime import datetime
-
-_dictionary_check = False
-_timer_check = True
-_content_check = True
-_history_check = True
 
 class AntiSpam:
     def __init__(self, dictionary=False, timer=True, content=True, history=True):
-        _dictionary_check = dictionary
-        _timer_check = timer
-        _content_check = content
-        _history_check = history
+        self._dictionary_check = dictionary
+        self._timer_check = timer
+        self._content_check = content
+        self._history_check = history
 
-
-    # @classmethod
-    # def dictionary_check(condition: bool):
-    #     self._dictionary_check = condition
-    #     if condition == True:
-    #         nltk.download('words')
-
-    @classmethod
     async def check(self,
         bot: discord.Client,
         channel: discord.TextChannel,
@@ -43,12 +30,11 @@ class AntiSpam:
             if msg.author.id == author.id:
                 Author_Messages.append(msg)
 
-        if _history_check:
+        if self._history_check:
             if Author_Messages[0].content == Author_Messages[1].content:
                 return True
 
-        if _dictionary_check:
-            print("test")
+        if self._dictionary_check:
             words = Author_Messages[0].content.split(' ')
             for i, word in enumerate(words):
                 for letter in word:
@@ -60,7 +46,7 @@ class AntiSpam:
                     passes += 1
             if passes < 1:
                 return True
-        if _timer_check:
+        if self._timer_check:
             Time_check_msg = []
             for msg in Author_Messages:
                 if (datetime.utcnow() - msg.created_at.replace(tzinfo=None)).seconds < 15:
@@ -68,7 +54,7 @@ class AntiSpam:
             if len(Time_check_msg) >= 5:
                 return True
 
-        if _content_check:
+        if self._content_check:
             words = Author_Messages[0].content.split(' ')
             for word in words:
                 if len(word) > 35:
