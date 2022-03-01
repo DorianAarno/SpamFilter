@@ -4,7 +4,7 @@ A simple and efficient spam filter made to be used in discord bots made with any
 # Installation
 You can use [pip](https://pip.pypa.io/en/stable/) to install this library.
 ```
-pip install discord-antispam
+pip install discordpy-antispam
 ```
 
 # Usage

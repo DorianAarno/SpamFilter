@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="discord-antispam",
+    name="discordpy-antispam",
     version="1.0.1",
     description="An efficient and simple anti-spam system made for your discord bots.",
     long_description=long_description,
