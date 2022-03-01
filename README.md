@@ -36,7 +36,6 @@ async def on_message(msg):
   ).check(bot, msg.channel, msg.author)
 ```
 
-<<<<<<< HEAD
 # Notes
 * This library has only been tested with [discord-disnake](https://pypi.org/project/discord-disnake/).
 * Your bot needs to have access to message content.
@@ -47,18 +46,6 @@ async def on_message(msg):
 * Open pull request.
 * Issues are welcome.
 * Consider giving this repository a ⭐, It is highly appreciated!
-=======
-# Notes 
-* This library has only been tested with [discord-disnake](https://pypi.org/project/discord-disnake/). 
-* Your bot needs to have access to message content. 
-
-# Contributing
-* Fork the repository. 
-* Add your desired change or filter. 
-* Open pull request. 
-* Issues are welcome. 
-* Consider giving this repository a ⭐, It is highly appreciated! 
->>>>>>> 624f7ee94d54e8e8680eb0a3f2f46426e91808be
 
 # License
 This repository has been made available via [MIT](https://github.com/DorianAarno/SpamFilter/blob/main/LICENSE) License.
