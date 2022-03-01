@@ -1,5 +1,5 @@
 # Spam Filter
-A simple and efficient spam filter made to be used in discord bots made with any fork of [discord.py](https://github.com/Rapptz/discord.py)!
+A simple and efficient spam filter built to be used in discord bots made with any fork of [discord.py](https://github.com/Rapptz/discord.py)!
 
 # Installation
 You can use [pip](https://pip.pypa.io/en/stable/) to install this library.
