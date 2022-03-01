@@ -14,7 +14,7 @@ from antispam import AntiSpam
 
 @bot.event
 async def on_message(msg):
-  spam_check = AntiSpam.check(bot, msg.channel, msg.author)
+  spam_check = AntiSpam().check(bot, msg.channel, msg.author)
 ```
 
 ### Detailed Guide

@@ -2,7 +2,7 @@ import discord
 from nltk.corpus import words as dictionary
 from datetime import datetime
 
-class AntiSpam:
+class AntiSpam():
     def __init__(self, dictionary=False, timer=True, content=True, history=True):
         self._dictionary_check = dictionary
         self._timer_check = timer
@@ -36,9 +36,11 @@ class AntiSpam:
                     try:
                         if msg.content == Messages[i+1].content:
                             return True
+                        else:
+                            break
                     except:
                         pass
-                    
+
             if Author_Messages[0].content == Author_Messages[1].content:
                 return True
 
