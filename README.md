@@ -36,6 +36,9 @@ async def on_message(msg):
   ).check(bot, msg.channel, msg.author)
 ```
 
+### Example
+You may view implementation of this library in [PointsBot](https://github.com/DorianAarno/PointsBot).
+
 # Notes
 * This library has only been tested with [discord-disnake](https://pypi.org/project/discord-disnake/).
 * Your bot needs to have access to message content.
