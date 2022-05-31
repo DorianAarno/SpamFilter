@@ -40,9 +40,10 @@ class AntiSpam():
                             break
                     except:
                         pass
-
-            if Author_Messages[0].content == Author_Messages[1].content:
-                return True
+            
+            if len(Author_Messages) >= 2:
+                if Author_Messages[0].content == Author_Messages[1].content:
+                    return True
 
         if self._dictionary_check:
             words = Author_Messages[0].content.split(' ')
@@ -108,9 +109,10 @@ class AntiSpam():
                 if alpha_dict[key] > highest_letter_count:
                     highest_letter_count = alpha_dict[key]
                     highest_letter = key
-
-            percent = (highest_letter_count/len(words))*100
-            if int(round(percent)) > 85:
-                return True
+            
+            if len(words):
+                percent = (highest_letter_count/len(words))*100
+                if int(round(percent)) > 85:
+                    return True
 
         return False
