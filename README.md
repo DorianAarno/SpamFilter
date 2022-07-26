@@ -2,9 +2,9 @@
 A simple and efficient spam filter built to be used in discord bots made with any fork of [discord.py](https://github.com/Rapptz/discord.py)!
 
 # Installation
-<!-- You can use [pip](https://pip.pypa.io/en/stable/) to install this library. -->
+You can use [pip](https://pip.pypa.io/en/stable/) to install this library.
 ```
-pip install git+https://github.com/DorianAarno/SpamFilter.git
+pip install discordpy-antispam
 ```
 
 # Usage
