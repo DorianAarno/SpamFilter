@@ -14,7 +14,7 @@ from SpamFilter import AntiSpam
 
 @bot.event
 async def on_message(msg):
-  spam_check = AntiSpam().check(bot, msg.channel, msg.author)
+  spam_check = await AntiSpam().check(bot, msg.channel, msg.author)
 ```
 
 ### Detailed Guide
@@ -28,7 +28,7 @@ history_check = True # Default is True, Checks if the message's content is dupli
 
 @bot.event
 async def on_message(msg):
-  spam_check = AntiSpam(
+  spam_check = await AntiSpam(
     dictionary = dictionary_check,
     timer = timer_check,
     content = content_check,
